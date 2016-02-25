@@ -1,0 +1,50 @@
+{% include 'header' %}
+
+#import "{{ prefix }}{{ module_info.name }}Configurator.h"
+
+// Data managers
+#import "{{ prefix }}{{ module_info.name }}DataManager.h"
+
+// Interactors
+#import "{{ prefix }}{{ module_info.name }}Interactor.h"
+
+// Presenters
+#import "{{ prefix }}{{ module_info.name }}Presenter.h"
+
+// Routers
+#import "{{ prefix }}{{ module_info.name }}Router.h"
+
+// View controllers
+#import "{{ prefix }}{{ module_info.name }}ViewController.h"
+
+@implementation {{ prefix }}{{ module_info.name }}Configurator
+
+#pragma mark - Public methods
+
+- (void)configureModuleForViewInput:(UIViewController *)viewInput {
+    if ([viewInput isKindOfClass:[{{ prefix }}{{ module_info.name }}ViewController class]]) {
+        [self priv_configure:({{ prefix }}{{ module_info.name }}ViewController *)viewInput];
+    }
+}
+
+#pragma mark - Private methods
+
+- (void)priv_configure:({{ prefix }}{{ module_info.name }}ViewController *)viewController {
+    {{ prefix }}{{ module_info.name }}Router *router = [[{{ prefix }}{{ module_info.name }}Router alloc] init];
+
+    {{ prefix }}{{ module_info.name }}Presenter *presenter = [[{{ prefix }}{{ module_info.name }}Presenter alloc] init];
+    presenter.view = viewController;
+    presenter.router = router;
+
+    {{ prefix }}{{ module_info.name }}Interactor *interactor = [[{{ prefix }}{{ module_info.name }}Interactor alloc] init];
+    interactor.output = presenter;
+
+    presenter.interactor = interactor;
+    viewController.output = presenter;
+
+    {{ prefix }}{{ module_info.name }}DataManager *dataManager = [[{{ prefix }}{{ module_info.name }}DataManager alloc] init];
+    dataManager.interactor = interactor;
+    interactor.dataManager = dataManager;
+}
+
+@end

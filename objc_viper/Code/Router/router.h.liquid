@@ -1,0 +1,10 @@
+{% include 'header' %}
+
+#import <Foundation/Foundation.h>
+
+// Interfaces
+#import "{{ prefix }}{{ module_info.name }}RouterInput.h"
+
+@interface {{ prefix }}{{ module_info.name }}Router : NSObject <{{ prefix }}{{ module_info.name }}RouterInput>
+
+@end

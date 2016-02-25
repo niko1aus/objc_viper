@@ -1,0 +1,13 @@
+{% include 'header' %}
+
+#import <UIKit/UIKit.h>
+
+// Interfaces
+#import "{{ prefix }}{{ module_info.name }}ViewInput.h"
+#import "{{ prefix }}{{ module_info.name }}ViewOutput.h"
+
+@interface {{ prefix }}{{ module_info.name }}ViewController : UIViewController <{{ prefix }}{{ module_info.name }}ViewInput>
+
+@property (nonatomic, weak) id<{{ prefix }}{{ module_info.name }}ViewOutput> output;
+
+@end

@@ -1,0 +1,14 @@
+{% include 'header' %}
+
+#import <Foundation/Foundation.h>
+
+// Interfaces
+#import "{{ prefix }}{{ module_info.name }}DataManagerInput.h"
+
+@protocol {{ prefix }}{{ module_info.name }}InteractorInput;
+
+@interface {{ prefix }}{{ module_info.name }}DataManager : NSObject <{{ prefix }}{{ module_info.name }}DataManagerInput>
+
+@property (nonatomic, strong) id<{{ prefix }}{{ module_info.name }}InteractorInput> interactor;
+
+@end

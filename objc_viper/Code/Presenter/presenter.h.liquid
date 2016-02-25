@@ -1,0 +1,19 @@
+{% include 'header' %}
+
+#import <Foundation/Foundation.h>
+
+// Interfaces
+#import "{{ prefix }}{{ module_info.name }}InteractorOutput.h"
+#import "{{ prefix }}{{ module_info.name }}ViewOutput.h"
+
+@protocol {{ prefix }}{{ module_info.name }}ViewInput;
+@protocol {{ prefix }}{{ module_info.name }}InteractorInput;
+@protocol {{ prefix }}{{ module_info.name }}RouterInput;
+
+@interface {{ prefix }}{{ module_info.name }}Presenter : NSObject <{{ prefix }}{{ module_info.name }}InteractorOutput, {{ prefix }}{{ module_info.name }}ViewOutput>
+
+@property (nonatomic, strong) id<{{ prefix }}{{ module_info.name }}ViewInput> view;
+@property (nonatomic, strong) id<{{ prefix }}{{ module_info.name }}InteractorInput> interactor;
+@property (nonatomic, strong) id<{{ prefix }}{{ module_info.name }}RouterInput> router;
+
+@end
