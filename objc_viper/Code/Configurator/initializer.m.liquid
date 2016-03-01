@@ -1,0 +1,15 @@
+{% include 'header' %}
+
+#import "{{ prefix }}{{ module_info.name }}Initializer.h"
+
+// Configurators
+#import "{{ prefix }}{{ module_info.name }}Configurator.h"
+
+@implementation {{ prefix }}{{ module_info.name }}Initializer
+
+- (void)awakeFromNib {
+    {{ prefix }}{{ module_info.name }}Configurator *configurator = [[{{ prefix }}{{ module_info.name }}Configurator alloc] init];
+    [configurator configureModuleForViewInput:self.viewController];
+}
+
+@end
