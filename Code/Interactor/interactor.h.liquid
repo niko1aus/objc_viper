@@ -4,9 +4,8 @@
 
 // Interfaces
 #import "{{ prefix }}{{ module_info.name }}InteractorInput.h"
-
-@protocol {{ prefix }}{{ module_info.name }}DataManagerInput;
-@protocol {{ prefix }}{{ module_info.name }}InteractorOutput;
+#import "{{ prefix }}{{ module_info.name }}DataManagerInput.h"
+#import "{{ prefix }}{{ module_info.name }}InteractorOutput.h"
 
 @interface {{ prefix }}{{ module_info.name }}Interactor : NSObject <{{ prefix }}{{ module_info.name }}InteractorInput>
 

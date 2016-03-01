@@ -4,10 +4,10 @@
 
 // Interfaces
 #import "{{ prefix }}{{ module_info.name }}InteractorOutput.h"
+#import "{{ prefix }}{{ module_info.name }}InteractorInput.h"
 #import "{{ prefix }}{{ module_info.name }}ViewOutput.h"
+#import "{{ prefix }}{{ module_info.name }}ViewInput.h"
 
-@protocol {{ prefix }}{{ module_info.name }}ViewInput;
-@protocol {{ prefix }}{{ module_info.name }}InteractorInput;
 @protocol {{ prefix }}{{ module_info.name }}RouterInput;
 
 @interface {{ prefix }}{{ module_info.name }}Presenter : NSObject <{{ prefix }}{{ module_info.name }}InteractorOutput, {{ prefix }}{{ module_info.name }}ViewOutput>
