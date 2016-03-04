@@ -48,7 +48,7 @@ return self;
 #pragma mark - Custom accessors
 
 - (UIViewController *)viewController {
-return (UIViewController *)((BRTalkListPresenter *)self.presenter).view;
+return (UIViewController *)(({{ prefix }}{{ module_info.name }}Presenter *)self.presenter).view;
 }
 
 @end
