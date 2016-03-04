@@ -8,36 +8,26 @@ license: "MIT"
 # The declarations for code files
 code_files:
 # View layer
-- {name: View/ViewInput.h, path: Code/View/view_input.h.liquid}
-- {name: View/ViewOutput.h, path: Code/View/view_output.h.liquid}
+- {name: View/ViewControllerDelegate.h, path: Code/View/viewconroller_delegate.h.liquid}
 - {name: View/ViewController.h, path: Code/View/viewcontroller.h.liquid}
 - {name: View/ViewController.m, path: Code/View/viewcontroller.m.liquid}
 
 # Presenter layer
-- {name: Presenter/ModuleInput.h, path: Code/Presenter/module_input.h.liquid}
+- {name: Presenter/PresenterDelegate.h, path: Code/Presenter/presenter_delegate.h.liquid}
 - {name: Presenter/Presenter.h, path: Code/Presenter/presenter.h.liquid}
 - {name: Presenter/Presenter.m, path: Code/Presenter/presenter.m.liquid}
 
 # Interactor layer
-- {name: Interactor/InteractorInput.h, path: Code/Interactor/interactor_input.h.liquid}
-- {name: Interactor/InteractorOutput.h, path: Code/Interactor/interactor_output.h.liquid}
+- {name: Interactor/InteractorDelegate.h, path: Code/Interactor/interactor_delegate.h.liquid}
 - {name: Interactor/Interactor.h, path: Code/Interactor/interactor.h.liquid}
 - {name: Interactor/Interactor.m, path: Code/Interactor/interactor.m.liquid}
 
-# Router layer
-- {name: Router/RouterInput.h, path: Code/Router/router_input.h.liquid}
-- {name: Router/Router.h, path: Code/Router/router.h.liquid}
-- {name: Router/Router.m, path: Code/Router/router.m.liquid}
+# Wireframe layer
+- {name: Wireframe/WireframeDelegate.h, path: Code/Router/wireframe_delegate.h.liquid}
+- {name: Wireframe/Wireframe.h, path: Code/Router/wireframe.h.liquid}
+- {name: Wireframe/Wireframe.h, path: Code/Router/wireframe.m.liquid}
 
-#
-- {name: Configurator/Configurator.h, path: Code/Configurator/configurator.h.liquid}
-- {name: Configurator/Configurator.m, path: Code/Configurator/configurator.m.liquid}
-
-#
-- {name: Configurator/Initializer.h, path: Code/Configurator/initializer.h.liquid}
-- {name: Configurator/Initializer.m, path: Code/Configurator/initializer.m.liquid}
-
-#
+# Data manager layer
+- {name: DataManager/DataManagerDelegate.h, path: Code/DataManager/datamanager_delegate.h.liquid}
 - {name: DataManager/DataManager.h, path: Code/DataManager/datamanager.h.liquid}
 - {name: DataManager/DataManager.m, path: Code/DataManager/datamanager.m.liquid}
-- {name: DataManager/DataManagerInput.h, path: Code/DataManager/datamanager_input.h.liquid}

@@ -3,11 +3,11 @@
 #import <UIKit/UIKit.h>
 
 // Interfaces
-#import "{{ prefix }}{{ module_info.name }}ViewInput.h"
-#import "{{ prefix }}{{ module_info.name }}ViewOutput.h"
+#import "{{ prefix }}{{ module_info.name }}ViewControllerDelegate.h"
+#import "{{ prefix }}{{ module_info.name }}PresenterDelegate.h"
 
-@interface {{ prefix }}{{ module_info.name }}ViewController : UIViewController <{{ prefix }}{{ module_info.name }}ViewInput>
+@interface {{ prefix }}{{ module_info.name }}ViewController : UIViewController <{{ prefix }}{{ module_info.name }}ViewControllerDelegate>
 
-@property (nonatomic, weak) id<{{ prefix }}{{ module_info.name }}ViewOutput> output;
+@property (nonatomic, weak) id<{{ prefix }}{{ module_info.name }}PresenterDelegate> presenter;
 
 @end

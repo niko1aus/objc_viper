@@ -1,0 +1,14 @@
+{% include 'header' %}
+
+#import "{{ prefix }}ParentWireframe.h"
+
+// Interfaces
+#import "{{ prefix }}{{ module_info.name }}WireframeDelegate.h"
+
+@protocol {{ prefix }}{{ module_info.name }}PresenterDelegate;
+
+@interface {{ prefix }}{{ module_info.name }}Wireframe : {{ prefix }}ParentWireframe <{{ prefix }}{{ module_info.name }}WireframeDelegate>
+
+@property (nonatomic, strong) id<{{ prefix }}{{ module_info.name }}PresenterDelegate> presenter;
+
+@end

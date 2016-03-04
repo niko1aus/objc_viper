@@ -2,6 +2,9 @@
 
 #import "{{ prefix }}{{ module_info.name }}ViewController.h"
 
+// Presenter
+#import "{{ prefix }}{{ module_info.name }}PresenterDelegate.h"
+
 @interface {{ prefix }}{{ module_info.name }}ViewController ()
 
 @end
@@ -12,5 +15,7 @@
     [super viewDidLoad];
     [self.output viewIsReady];
 }
+
+#pragma mark - Private methods
 
 @end

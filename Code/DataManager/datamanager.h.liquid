@@ -3,10 +3,11 @@
 #import <Foundation/Foundation.h>
 
 // Interfaces
-#import "{{ prefix }}{{ module_info.name }}DataManagerInput.h"
-#import "{{ prefix }}{{ module_info.name }}InteractorInput.h"
+#import "{{ prefix }}{{ module_info.name }}DataManagerDelegate.h"
 
-@interface {{ prefix }}{{ module_info.name }}DataManager : NSObject <{{ prefix }}{{ module_info.name }}DataManagerInput>
+@protocol {{ prefix }}{{ module_info.name }}InteractorDelegate;
+
+@interface {{ prefix }}{{ module_info.name }}DataManager : NSObject <{{ prefix }}{{ module_info.name }}DataManagerDelegate>
 
 @property (nonatomic, strong) id<{{ prefix }}{{ module_info.name }}InteractorInput> interactor;
 

@@ -1,0 +1,54 @@
+{% include 'header' %}
+
+#import "{{ prefix }}{{ module_info.name }}Wireframe.h"
+
+// Presenters
+#import "{{ prefix }}{{ module_info.name }}Presenter.h"
+
+// View controllers
+#import "{{ prefix }}{{ module_info.name }}ViewController.h"
+
+// Interactors
+#import "{{ prefix }}{{ module_info.name }}Interactor.h"
+
+//Data managers
+#import "{{ prefix }}{{ module_info.name }}DataManager.h"
+
+@implementation {{ prefix }}{{ module_info.name }}Wireframe
+
+- (instancetype)init {
+    self = [super init];
+    if (self) {
+    {{ prefix }}{{ module_info.name }}Presenter *presenter = [[{{ prefix }}{{ module_info.name }}Presenter alloc] init];
+    {{ prefix }}{{ module_info.name }}ViewController *viewController = [{{ prefix }}{{ module_info.name }}ViewController new];
+    {{ prefix }}{{ module_info.name }}Interactor *interactor = [[{{ prefix }}{{ module_info.name }}Interactor alloc] init];
+    {{ prefix }}{{ module_info.name }}DataManager *dataManager = [[{{ prefix }}{{ module_info.name }}DataManager alloc] init];
+
+    presenter.view = viewController;
+    presenter.interactor = interactor;
+    presenter.wireframe = self;
+
+    viewController.presenter = presenter;
+
+    interactor.presenter = presenter;
+    interactor.dataManager = dataManager;
+
+    dataManager.interactor = interactor;
+
+    self.presenter = presenter;
+}
+
+return self;
+}
+
+#pragma mark - Transitions
+
+
+
+#pragma mark - Custom accessors
+
+- (UIViewController *)viewController {
+return (UIViewController *)((BRTalkListPresenter *)self.presenter).view;
+}
+
+@end

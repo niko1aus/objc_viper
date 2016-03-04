@@ -2,9 +2,18 @@
 
 #import "{{ prefix }}{{ module_info.name }}Presenter.h"
 
+// Interactor
+#import "{{ prefix }}{{ module_info.name }}InteractorDelegate.h"
+
+// View
+#import "{{ prefix }}{{ module_info.name }}ViewControllerDelegate.h"
+
+// Wireframe
+#import "{{ prefix }}{{ module_info.name }}WireframeDelegate.h"
+
 @implementation {{ prefix }}{{ module_info.name }}Presenter
 
-#pragma mark - {{ prefix }}{{ module_info.name }}ViewOutput
+#pragma mark - {{ prefix }}{{ module_info.name }}ViewControllerDelegate
 
 - (void)viewIsReady {
 
