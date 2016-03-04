@@ -23,9 +23,9 @@ code_files:
 - {name: Interactor/Interactor.m, path: Code/Interactor/interactor.m.liquid}
 
 # Wireframe layer
-- {name: Wireframe/WireframeDelegate.h, path: Code/Router/wireframe_delegate.h.liquid}
-- {name: Wireframe/Wireframe.h, path: Code/Router/wireframe.h.liquid}
-- {name: Wireframe/Wireframe.h, path: Code/Router/wireframe.m.liquid}
+- {name: Wireframe/WireframeDelegate.h, path: Code/Wireframe/wireframe_delegate.h.liquid}
+- {name: Wireframe/Wireframe.h, path: Code/Wireframe/wireframe.h.liquid}
+- {name: Wireframe/Wireframe.h, path: Code/Wireframe/wireframe.m.liquid}
 
 # Data manager layer
 - {name: DataManager/DataManagerDelegate.h, path: Code/DataManager/datamanager_delegate.h.liquid}
