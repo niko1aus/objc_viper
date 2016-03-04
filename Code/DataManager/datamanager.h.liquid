@@ -9,6 +9,6 @@
 
 @interface {{ prefix }}{{ module_info.name }}DataManager : NSObject <{{ prefix }}{{ module_info.name }}DataManagerDelegate>
 
-@property (nonatomic, strong) id<{{ prefix }}{{ module_info.name }}InteractorInput> interactor;
+@property (nonatomic, strong) id<{{ prefix }}{{ module_info.name }}InteractorDelegate> interactor;
 
 @end

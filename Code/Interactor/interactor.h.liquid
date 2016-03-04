@@ -3,13 +3,14 @@
 #import <Foundation/Foundation.h>
 
 // Interfaces
-#import "{{ prefix }}{{ module_info.name }}InteractorInput.h"
-#import "{{ prefix }}{{ module_info.name }}DataManagerInput.h"
-#import "{{ prefix }}{{ module_info.name }}InteractorOutput.h"
+#import "{{ prefix }}{{ module_info.name }}InteractorDelegate.h"
 
-@interface {{ prefix }}{{ module_info.name }}Interactor : NSObject <{{ prefix }}{{ module_info.name }}InteractorInput>
+@protocol {{ prefix }}{{ module_info.name }}PresenterDelegate;
+@protocol {{ prefix }}{{ module_info.name }}DataManagerDelegate;
 
-@property (nonatomic, strong) id<{{ prefix }}{{ module_info.name }}DataManagerInput> dataManager;
-@property (nonatomic, strong) id<{{ prefix }}{{ module_info.name }}InteractorOutput> output;
+@interface {{ prefix }}{{ module_info.name }}Interactor : NSObject <{{ prefix }}{{ module_info.name }}InteractorDelegate>
+
+@property (nonatomic, weak) id<{{ prefix }}{{ module_info.name }}PresenterDelegate> presenter;
+@property (nonatomic, strong) id<{{ prefix }}{{ module_info.name }}DataManagerDelegate> dataManager;
 
 @end
