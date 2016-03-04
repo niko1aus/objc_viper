@@ -25,7 +25,7 @@ code_files:
 # Wireframe layer
 - {name: Wireframe/WireframeDelegate.h, path: Code/Wireframe/wireframe_delegate.h.liquid}
 - {name: Wireframe/Wireframe.h, path: Code/Wireframe/wireframe.h.liquid}
-- {name: Wireframe/Wireframe.h, path: Code/Wireframe/wireframe.m.liquid}
+- {name: Wireframe/Wireframe.m, path: Code/Wireframe/wireframe.m.liquid}
 
 # Data manager layer
 - {name: DataManager/DataManagerDelegate.h, path: Code/DataManager/datamanager_delegate.h.liquid}
